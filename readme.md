@@ -13,4 +13,4 @@
 - `TOKEN`: Discord bot token
 - `GUILD`: The guild to limit the bot to
 - `PREFIX`: Prefix used with commands
-- `JOINLENGTH`: How long a user can be dmed when changing roles
+- `JOINLENGTH`: How long a user can be DMed when changing roles
