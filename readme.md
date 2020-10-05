@@ -14,3 +14,4 @@
 - `GUILD`: The guild to limit the bot to
 - `PREFIX`: Prefix used with commands
 - `JOINLENGTH`: How long a user can be DMed when changing roles
+- `MODE`: If set to `DEBUG`, commands will be disabled and messages will be sent to console instead of users.

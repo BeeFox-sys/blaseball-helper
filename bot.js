@@ -27,6 +27,7 @@ const client = new Client({disableMentions:"all"});
 //Command Handler
 client.on("message",async (message)=>{
     //reject nonapplicable messages
+    if(process.env.MODE == "DEBUG") return;
     if(message.author.bot) return;
     if(message.guild?.id != process.env.GUILD) return;
     if(!message.content.startsWith(process.env.PREFIX)) return;
@@ -139,6 +140,7 @@ client.on("guildMemberUpdate",(oldMember,newMember)=>{
     let greeting = teamData.message;
     greeting = greeting.replace(/NAME/g, newMember.displayName);
 
+    if(process.env.MODE == "DEBUG") return console.log(greeting);
     //Attempt to greet
     newMember.send(greeting).catch(error=>{switch(error.message){
     case "Cannot send messages to this user": 
